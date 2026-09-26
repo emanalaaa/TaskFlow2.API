@@ -51,7 +51,6 @@ public class AuthService
         var secret = _config["Jwt:Secret"]!;
         var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secret));
         var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
-
         // Claims = data packed inside the token
         var claims = new[]
         {
