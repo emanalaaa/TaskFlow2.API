@@ -7,6 +7,9 @@ public class TaskItem
     public string? Description { get; set; }  // ? means nullable (optional field)
     public bool IsCompleted { get; set; }
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+
+    public int UserId { get; set; }          // FOREIGN KEY
+    public User User { get; set; } = null!;  // Navigation property to the User entity
 }
 
 

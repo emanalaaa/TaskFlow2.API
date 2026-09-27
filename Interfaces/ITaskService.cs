@@ -6,9 +6,9 @@ namespace TaskFlow2.API.Interfaces;
 
 public interface ITaskService
 {
-    Task<List<TaskItem>> GetAllAsync();
-    Task<TaskItem?> GetByIdAsync (int id);
-    Task<TaskItem> CreateAsync(CreateTaskDto dto);
-    Task<bool> CompleteAsync(int id);
+    Task<List<TaskItem>> GetAllAsync(int userId);
+    Task<TaskItem?> GetByIdAsync (int id, int userId);
+    Task<TaskItem> CreateAsync(CreateTaskDto dto, int userId);
+    Task<bool> CompleteAsync(int id, int userId);
 
 }
